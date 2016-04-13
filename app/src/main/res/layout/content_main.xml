@@ -31,7 +31,7 @@
     <Button
         android:id="@+id/myButton"
         android:text="Add"
-        android:textSize="30sp"
+        android:textSize="10sp"
         android:layout_width="80dp"
         android:layout_height="40dp" />
 
@@ -41,8 +41,7 @@
         android:id="@+id/sum"
         android:textSize="30sp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="" />
+        android:layout_height="wrap_content" />
 
 
 </LinearLayout>
