@@ -5,9 +5,13 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,5 +52,27 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private EditText num1;
+    private EditText num2;
+    private TextView sums;
+
+    public void buttonOnClick( View v) {
+        Button add = (Button) v;
+        num1 = (EditText)findViewById(R.id.number1);
+        num2 = (EditText)findViewById(R.id.number2);
+        String s1 = num1.getText().toString();
+        String s2 = num2.getText().toString();
+        int n1 = Integer.parseInt(s1);
+        int n2 = Integer.parseInt(s2);
+        sums =(TextView)findViewById(R.id.sum);
+        int sss = sum(n1,n2);
+        String s3 = "" + sss;
+        sums.setText(s3);
+    }
+
+    public int sum( int n1, int n2 ) {
+        return (n1+n2);
     }
 }
