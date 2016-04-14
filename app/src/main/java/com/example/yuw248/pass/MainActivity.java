@@ -6,6 +6,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -30,6 +31,16 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        final Button button = (Button) findViewById(R.id.myButton);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Perform action on click
+                calculateSum(v);
+            }
+        });
+
+
     }
 
     @Override
@@ -58,8 +69,9 @@ public class MainActivity extends AppCompatActivity {
     private EditText num2;
     private TextView sums;
 
-    public void buttonOnClick( View v) {
-        Button add = (Button) v;
+
+
+    public void calculateSum(View view) {
         num1 = (EditText)findViewById(R.id.number1);
         num2 = (EditText)findViewById(R.id.number2);
         String s1 = num1.getText().toString();
