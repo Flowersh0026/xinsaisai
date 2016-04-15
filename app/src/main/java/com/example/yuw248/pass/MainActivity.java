@@ -79,12 +79,12 @@ public class MainActivity extends AppCompatActivity {
         int n1 = Integer.parseInt(s1);
         int n2 = Integer.parseInt(s2);
         sums =(TextView)findViewById(R.id.sum);
-        int sss = sum(n1,n2);
+        int sss = sub(n1,n2);
         String s3 = "" + sss;
         sums.setText(s3);
     }
 
-    public int sum( int n1, int n2 ) {
-        return (n1+n2);
+    public int sub( int n1, int n2 ) {
+        return (n1 - n2);
     }
 }
