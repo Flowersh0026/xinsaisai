@@ -31,7 +31,7 @@ public class ApplicationTest extends ActivityInstrumentationTestCase2<MainActivi
         final int cand1 = 8;
         final int cand2 = 7;
 
-        int expectedSum = 15;
+        int expectedSum = 1;
 
         getInstrumentation().runOnMainSync(new Runnable() {
             @Override
